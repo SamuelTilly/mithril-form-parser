@@ -1,0 +1,21 @@
+{
+  "name": "mithril-form-parser",
+  "version": "1.0.0",
+  "description": "A parser for mithril forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tape -r ./test.js test/**/*.js"
+  },
+  "author": "Samuel Tilly",
+  "license": "MIT",
+  "keywords": [
+    "mithril",
+    "form",
+    "parser"
+  ],
+  "devDependencies": {
+    "mithril": "^1.0.0-rc.3",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}
