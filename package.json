@@ -13,6 +13,11 @@
     "form",
     "parser"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamuelTilly/mithril-form-parser.git"
+  },
+  "homepage": "https://github.com/SamuelTilly/mithril-form-parser",
   "devDependencies": {
     "mithril": "^1.0.0-rc.3",
     "standard": "^8.6.0",
