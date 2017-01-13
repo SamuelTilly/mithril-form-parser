@@ -8,12 +8,16 @@ module.exports = function (vnode) {
       (res[name] = res[name] || []).push(value)
     }
 
-    if (!(attrs.name == null) && !(attrs.value == null)) {
+    if (!(attrs.name == null)) {
       if (['checkbox', 'radio'].indexOf(attrs.type) > -1) {
         if (attrs.checked) {
-          append(attrs.name, attrs.value)
+          if (!(attrs.value == null)) {
+            append(attrs.name, attrs.value)
+          } else {
+            append(attrs.name, true)
+          }
         }
-      } else {
+      } else if (!(attrs.value == null)) {
         append(attrs.name, attrs.value)
       }
     }
@@ -26,9 +30,7 @@ module.exports = function (vnode) {
   parser(result, vnode)
 
   Object.keys(result).forEach(function (key) {
-    if (result[key].length === 1) {
-      result[key] = result[key][0]
-    }
+    if (result[key].length === 1) result[key] = result[key][0]
   })
 
   return result
