@@ -22,7 +22,9 @@ module.exports = function (vnode) {
       }
     }
 
-    (vnode.children || []).reduce(parser, res)
+    if (vnode.children instanceof Array) {
+      (vnode.children || []).reduce(parser, res)
+    }
 
     return res
   }
