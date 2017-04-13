@@ -1,8 +1,8 @@
 module.exports = function (vnode) {
-  if (vnode == null) return
   var result = {}
 
   function parser (res, vnode) {
+    if (vnode == null) return
     var attrs = vnode.attrs || {}
 
     function append (name, value) {
