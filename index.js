@@ -1,4 +1,5 @@
 module.exports = function (vnode) {
+  if (vnode == null) return
   var result = {}
 
   function parser (res, vnode) {
