@@ -1,6 +1,6 @@
 {
   "name": "mithril-form-parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A parser for mithril forms",
   "main": "index.js",
   "scripts": {
