@@ -56,3 +56,20 @@ test('ignore null value', function (t) {
 
   t.end()
 })
+
+test('ignore null value', function (t) {
+  t.deepEqual(
+    formParser(
+      m('div', [
+        m('input', { name: 'field1', value: 1 }),
+        null,
+        m('input', { name: 'field2', value: 2 })
+      ])),
+    {
+      field1: 1,
+      field2: 2
+    }
+  )
+
+  t.end()
+})
