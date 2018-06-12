@@ -2,7 +2,7 @@ module.exports = function (vnode) {
   var result = {}
 
   function parser (res, vnode) {
-    if (vnode == null) return
+    if (vnode == null) return res
     var attrs = vnode.attrs || {}
 
     function append (name, value) {
